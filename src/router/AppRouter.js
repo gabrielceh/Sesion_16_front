@@ -3,12 +3,20 @@ import { Route, Routes } from 'react-router-dom';
 import Dashboard from '../components/Dashboard';
 import Login from '../components/Login';
 import PrivateRoutes from './PrivateRoutes';
+import PublicRoutes from './PublicRoutes';
 import Route404 from './Route404';
 
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route
+        path="/"
+        element={
+          <PublicRoutes>
+            <Login />
+          </PublicRoutes>
+        }
+      />
       <Route
         path="/home/*"
         element={
