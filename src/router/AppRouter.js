@@ -6,6 +6,10 @@ import PrivateRoutes from './PrivateRoutes';
 import PublicRoutes from './PublicRoutes';
 import Route404 from './Route404';
 
+/**
+ * Se incrusta en el app
+ * */
+
 const AppRouter = () => {
   return (
     <Routes>
